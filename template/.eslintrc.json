@@ -1,0 +1,16 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": "standard-with-typescript",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "indent": "off",
+    "rules": {
+      "@typescript-eslint/no-explicit-any": 0
+    }
+}

@@ -1,0 +1,32 @@
+name: CI/CD BACKEND BCR
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+            node-version: 20
+      - name: Run Build
+        run: |
+          npm ci --include=dev
+      - name: Run linter
+        run: npm run lint
+      - name: Run tests
+        run: |
+          echo "Running Test On CI/CD",
+          npm run test
+        env: 
+          PGHOST: ${{ secrets.PGHOST }}
+          PGPORT: ${{ secrets.PGPORT }}
+          PGDATABASE: ${{ secrets.PGDATABASE }}
+          PGUSER: ${{ secrets.PGUSER }}
+          PGPASSWORD: ${{ secrets.PGPASSWORD }}

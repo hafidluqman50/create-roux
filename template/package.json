@@ -1,0 +1,70 @@
+{
+  "name": "roux",
+  "version": "1.0.0",
+  "description": "Express + Sequelize + Postgres boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "compile": "tsc",
+    "start:dev": "nodemon dist/index.js",
+    "lint": "eslint .",
+    "generate:model": "node scripts/generate.js model",
+    "generate:repository": "node scripts/generate.js repository",
+    "generate:service": "node scripts/generate.js service",
+    "generate:controller": "node scripts/generate.js controller",
+    "generate:route": "node scripts/generate.js route",
+    "test": "jest tests/ --forceExit"
+  },
+  "_moduleAlisases": {
+    "@Controllers": "dist/app/Http/Controllers",
+    "@Repositories": "dist/app/Http/Repositories",
+    "@Services": "dist/app/Http/Services",
+    "@Middlewares": "dist/app/Http/Middlewares",
+    "@Requests": "dist/app/Http/Requests",
+    "@DTOs": "dist/app/DTOs",
+    "@Interfaces": "dist/app/Interfaces",
+    "@Models": "dist/app/Models",
+    "@Exceptions": "dist/app/Exceptions",
+    "@routes": "dist/routes",
+    "@config": "dist/config"
+  },
+  "keywords": [
+    "express",
+    "sequelize",
+    "postgres",
+    "boilerplate"
+  ],
+  "author": "Hafiidh Luqmanul Hakim <hafidluqmanulhakim@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "module-alias": "^2.2.3",
+    "pg": "^8.11.5",
+    "sequelize": "^6.37.3"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.7",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.11",
+    "@types/supertest": "^6.0.2",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "eslint": "^8.57.0",
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.2.0",
+    "globals": "^15.6.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.0",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.1.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.13.1"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "create-roux",
+  "version": "1.0.0",
+  "description": "Create a Roux Express + Sequelize + Postgres boilerplate",
+  "bin": {
+    "create-roux": "bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "template",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "create",
+    "roux",
+    "express",
+    "sequelize",
+    "postgres",
+    "boilerplate"
+  ],
+  "author": "Hafiidh Luqmanul Hakim <hafidluqmanulhakim@gmail.com>",
+  "license": "ISC"
+}
