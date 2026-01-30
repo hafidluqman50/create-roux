@@ -1,6 +1,6 @@
 {
   "name": "create-roux",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a Roux Express + Sequelize + Postgres boilerplate",
   "bin": {
     "create-roux": "bin/cli.js"
@@ -20,5 +20,10 @@
     "boilerplate"
   ],
   "author": "Hafiidh Luqmanul Hakim <hafidluqmanulhakim@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "scripts": {
+    "test": "node -e \"console.log(\"ok\")\"",
+    "lint": "node -c bin/cli.js",
+    "pack": "npm pack --dry-run"
+  }
 }
